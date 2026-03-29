@@ -75,7 +75,11 @@ export default function Hero() {
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = PK_BORDER; }}>
                 Contact Me
               </a>
-              <a href="/shafreenresume.pdf" download="Shafreen_Syed_Mohamed_Resume.pdf"
+              <a
+                href="/shafreenresume.pdf"
+                download="Shafreen_Syed_Mohamed_Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
                 className="w-full sm:w-auto px-7 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-slate-300 font-semibold rounded-full text-sm text-center hover:bg-white/10 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                 <Download size={14} /> Resume
               </a>
