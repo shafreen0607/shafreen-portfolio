@@ -250,11 +250,15 @@ function TypingCard() {
 
   useEffect(() => {
     const onKeyDown = e => {
+      // Do NOT intercept keys when user is focused on any input/textarea/select
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+
       if (done) return;
-      if (e.key === 'Backspace')           { e.preventDefault(); applyKey('BACK'); }
-      else if (e.key === ' ')              { e.preventDefault(); applyKey('SPC'); }
-      else if (e.key === 'Enter')          { e.preventDefault(); finish(typed, startTime); }
-      else if (/^[a-zA-Z]$/.test(e.key))  { applyKey(e.key.toUpperCase()); }
+      if (e.key === 'Backspace')          { e.preventDefault(); applyKey('BACK'); }
+      else if (e.key === ' ')             { e.preventDefault(); applyKey('SPC'); }
+      else if (e.key === 'Enter')         { e.preventDefault(); finish(typed, startTime); }
+      else if (/^[a-zA-Z]$/.test(e.key)) { applyKey(e.key.toUpperCase()); }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
