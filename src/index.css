@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+}
+
+:root {
+  --pk: #F13E93;
+  --pk-glow: rgba(241,62,147,0.4);
+  --pk-soft: rgba(241,62,147,0.1);
+  --pk-border: rgba(241,62,147,0.25);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation { animation: float 3s ease-in-out infinite; }
+
+.pink-glow {
+  box-shadow: 0 0 55px rgba(241,62,147,0.45), 0 0 90px rgba(241,62,147,0.15);
+}
+
+.card-hover:hover {
+  box-shadow: 0 0 22px rgba(241,62,147,0.35);
+}
