@@ -6,7 +6,7 @@ A modern, responsive, and interactive developer portfolio built using **React (V
 
 ## 🚀 Live Demo
 
-👉 *Add your deployed link here (Vercel / Netlify)*
+👉 [https://shafreen-portfolio.vercel.app](https://shafreen-portfolio.vercel.app)
 
 ---
 
